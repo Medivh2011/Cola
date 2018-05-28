@@ -1,9 +1,7 @@
 package com.medivh.lattecore.net;
 
-import android.text.TextUtils;
-
-import com.medivh.lattecore.ConfigType;
-import com.medivh.lattecore.Latte;
+import com.medivh.lattecore.app.ConfigKeys;
+import com.medivh.lattecore.app.Latte;
 
 import java.util.concurrent.TimeUnit;
 
@@ -15,7 +13,7 @@ public class RestCreator {
 
     private static final class RetrofitHolder{
 
-        private static final String BASE_URL = (String) Latte.getConfiguations().get(ConfigType.API_HOST.name());
+        private static final String BASE_URL = (String) Latte.getConfiguration(ConfigKeys.API_HOST);
 
         private static final Retrofit RETROFIT_CLIENT = new Retrofit.Builder()
                 .baseUrl(BASE_URL)

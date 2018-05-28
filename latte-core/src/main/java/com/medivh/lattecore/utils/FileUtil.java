@@ -16,7 +16,7 @@ import android.webkit.MimeTypeMap;
 import android.widget.TextView;
 
 
-import com.medivh.lattecore.Latte;
+import com.medivh.lattecore.app.Latte;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;

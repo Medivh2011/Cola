@@ -1,9 +1,12 @@
 package com.medivh.lattecore.net;
 
+import android.content.Context;
+
 import com.medivh.lattecore.net.callback.IError;
 import com.medivh.lattecore.net.callback.IFailure;
 import com.medivh.lattecore.net.callback.IRequest;
 import com.medivh.lattecore.net.callback.ISuccess;
+import com.medivh.lattecore.ui.LoaderStyle;
 
 import java.util.Map;
 import java.util.WeakHashMap;
@@ -26,6 +29,10 @@ public class RestClientBuilder {
     private IError mIError;
 
     private RequestBody mRequestBody;
+
+    private Context mContext;
+
+    private LoaderStyle mLoaderStyle;
 
 
     public final RestClientBuilder url(String url)
@@ -99,9 +106,23 @@ public class RestClientBuilder {
         return mParams;
     }
 
+    public final RestClientBuilder loader(Context context ,LoaderStyle loaderStyle)
+    {
+        this.mContext = context;
+        this.mLoaderStyle = loaderStyle;
+        return this;
+    }
+
+    public final RestClientBuilder loader(Context context)
+    {
+        this.mContext = context;
+        this.mLoaderStyle = LoaderStyle.BallClipRotatePulseIndicator;
+        return this;
+    }
+
     public final RestClient build(){
 
-        return new RestClient(mUrl,mParams,mIRequest,mISuccess,mIFailure,mIError,mRequestBody);
+        return new RestClient(mUrl,mParams,mIRequest,mISuccess,mIFailure,mIError,mRequestBody,mContext,mLoaderStyle);
     }
 
 

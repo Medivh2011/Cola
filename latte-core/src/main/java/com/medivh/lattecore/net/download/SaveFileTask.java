@@ -5,7 +5,7 @@ import android.net.Uri;
 import android.os.AsyncTask;
 
 
-import com.medivh.lattecore.Latte;
+import com.medivh.lattecore.app.Latte;
 import com.medivh.lattecore.net.callback.IRequest;
 import com.medivh.lattecore.net.callback.ISuccess;
 import com.medivh.lattecore.utils.FileUtil;

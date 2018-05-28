@@ -1,10 +1,14 @@
 package com.medivh.lattecore.net;
 
+import android.content.Context;
+
 import com.medivh.lattecore.net.callback.IError;
 import com.medivh.lattecore.net.callback.IFailure;
 import com.medivh.lattecore.net.callback.IRequest;
 import com.medivh.lattecore.net.callback.ISuccess;
 import com.medivh.lattecore.net.callback.RequestCallBacks;
+import com.medivh.lattecore.ui.LatteLoader;
+import com.medivh.lattecore.ui.LoaderStyle;
 
 import java.util.Map;
 
@@ -28,13 +32,20 @@ public class RestClient {
 
     private final RequestBody BODY;
 
+    private final Context CONTEXT;
+
+    private final LoaderStyle LOADER_STYLE;
+
     public RestClient(String url,
                       Map<String, Object> params,
                       IRequest iRequest,
                       ISuccess iSuccess,
                       IFailure iFailure,
                       IError iError,
-                      RequestBody body) {
+                      RequestBody body,
+                      Context context,
+                      LoaderStyle loaderStyle
+                        ) {
         this.URL = url;
         this.PARAMS = params;
         this.IREQUEST = iRequest;
@@ -42,6 +53,9 @@ public class RestClient {
         this.IFAILURE = iFailure;
         this.IERROR = iError;
         this.BODY = body;
+        this.CONTEXT = context;
+        this.LOADER_STYLE = loaderStyle;
+
     }
 
     public static  RestClientBuilder builder()
@@ -59,6 +73,11 @@ public class RestClient {
         {
             IREQUEST.onRequestStart();
         }
+        if ( LOADER_STYLE != null )
+        {
+            LatteLoader.showLoading(CONTEXT,LOADER_STYLE);
+        }
+
         switch (method)
         {
             case GET:
@@ -98,7 +117,7 @@ public class RestClient {
 
    private Callback<String> getRequestCallback()
    {
-       return new RequestCallBacks(IREQUEST,ISUCCESS,IFAILURE,IERROR);
+       return new RequestCallBacks(IREQUEST,ISUCCESS,IFAILURE,IERROR,LOADER_STYLE);
    }
 
    public final void get()

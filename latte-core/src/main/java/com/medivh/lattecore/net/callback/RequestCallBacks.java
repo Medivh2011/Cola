@@ -1,8 +1,13 @@
 package com.medivh.lattecore.net.callback;
 
-import java.util.Map;
+import android.os.Handler;
+import android.os.Looper;
 
-import okhttp3.RequestBody;
+import com.medivh.lattecore.app.ConfigKeys;
+import com.medivh.lattecore.app.Latte;
+import com.medivh.lattecore.ui.LatteLoader;
+import com.medivh.lattecore.ui.LoaderStyle;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -17,12 +22,17 @@ public class RequestCallBacks implements Callback<String> {
 
     private IError mIError;
 
+    private LoaderStyle mLoaderStyle;
 
-    public RequestCallBacks(IRequest IRequest, ISuccess ISuccess, IFailure IFailure, IError IError) {
+    private static Handler mHandler = Latte.getHandler();
+
+
+    public RequestCallBacks(IRequest IRequest, ISuccess ISuccess, IFailure IFailure, IError IError ,LoaderStyle style) {
         mIRequest = IRequest;
         mISuccess = ISuccess;
         mIFailure = IFailure;
         mIError = IError;
+        mLoaderStyle = style;
     }
 
     @Override
@@ -42,6 +52,7 @@ public class RequestCallBacks implements Callback<String> {
                 mIError.onError(response.code(), response.message());
             }
         }
+       onRequestFinish();
 
     }
 
@@ -55,7 +66,14 @@ public class RequestCallBacks implements Callback<String> {
         {
             mIRequest.onRequestEnd();
         }
+       onRequestFinish();
 
+    }
 
+    private void onRequestFinish() {
+        final long delayed = Latte.getConfiguration(ConfigKeys.LOADER_DELAYED);
+        if (mLoaderStyle != null) {
+            mHandler.postDelayed(() -> LatteLoader.stopLoading(), delayed);
+        }
     }
 }
