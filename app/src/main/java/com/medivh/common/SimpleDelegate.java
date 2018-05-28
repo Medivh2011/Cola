@@ -9,10 +9,10 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.medivh.common.databinding.SimpleDelegateBinding;
-import com.medivh.lattecore.app.Latte;
-import com.medivh.lattecore.delegates.LatteDelegate;
-import com.medivh.lattecore.net.RestClient;
-import com.medivh.lattecore.ui.LoaderStyle;
+import com.medivh.core.app.Latte;
+import com.medivh.core.delegates.LatteDelegate;
+import com.medivh.core.net.RestClient;
+import com.medivh.core.ui.LoaderStyle;
 
 public class SimpleDelegate extends LatteDelegate<SimpleDelegateBinding>{
 

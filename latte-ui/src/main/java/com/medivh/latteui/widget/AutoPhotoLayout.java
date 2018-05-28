@@ -20,7 +20,7 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.RequestOptions;
 
 import com.joanzapata.iconify.widget.IconTextView;
-import com.medivh.lattecore.delegates.LatteDelegate;
+import com.medivh.core.delegates.LatteDelegate;
 import com.medivh.latteui.R;
 
 import java.util.ArrayList;

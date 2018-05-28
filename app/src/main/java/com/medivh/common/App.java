@@ -4,9 +4,9 @@ import android.app.Application;
 
 import com.joanzapata.iconify.fonts.FontAwesomeModule;
 import com.medivh.latte.ec.font.FontEcModule;
-import com.medivh.lattecore.app.Latte;
-import com.medivh.lattecore.net.interceptors.BaseInterceptor;
-import com.medivh.lattecore.net.interceptors.DebugInterceptor;
+import com.medivh.core.app.Latte;
+import com.medivh.core.net.interceptors.BaseInterceptor;
+import com.medivh.core.net.interceptors.DebugInterceptor;
 
 public class App extends Application {
 

@@ -3,8 +3,8 @@ package com.medivh.common;
 
 
 
-import com.medivh.lattecore.activities.ProxyActivity;
-import com.medivh.lattecore.delegates.LatteDelegate;
+import com.medivh.core.activities.ProxyActivity;
+import com.medivh.core.delegates.LatteDelegate;
 
 public class MainActivity extends ProxyActivity {
 
