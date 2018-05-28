@@ -1,5 +1,6 @@
 package com.medivh.lattecore.delegates;
 
+import android.app.Activity;
 import android.databinding.DataBindingUtil;
 import android.databinding.ViewDataBinding;
 import android.os.Bundle;
@@ -24,6 +25,8 @@ public  abstract class LatteDelegate< T extends ViewDataBinding > extends Permis
         super.onDestroy();
         mBinding.unbind();
     }
+    
+   
 
     public T getBinding() {
 
@@ -31,6 +34,10 @@ public  abstract class LatteDelegate< T extends ViewDataBinding > extends Permis
     }
 
 
+    public Activity getProxyActivity() {
+        return this.getActivity();
+    }
 
-
+    public void startCameraWithCheck() {
+    }
 }

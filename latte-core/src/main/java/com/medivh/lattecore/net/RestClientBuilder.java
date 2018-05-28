@@ -8,6 +8,7 @@ import com.medivh.lattecore.net.callback.IRequest;
 import com.medivh.lattecore.net.callback.ISuccess;
 import com.medivh.lattecore.ui.LoaderStyle;
 
+import java.io.File;
 import java.util.Map;
 import java.util.WeakHashMap;
 
@@ -28,12 +29,34 @@ public class RestClientBuilder {
 
     private IError mIError;
 
-    private RequestBody mRequestBody;
+    private RequestBody mBody;
 
     private Context mContext;
 
     private LoaderStyle mLoaderStyle;
 
+    private File mFile;
+
+    private String mDownloadDir;
+
+    private String mExtension;
+
+    private String mName;
+
+    public final RestClientBuilder name(String name) {
+        this.mName = name;
+        return this;
+    }
+
+    public final RestClientBuilder downloadDir(String downloadDir) {
+        this.mDownloadDir = downloadDir;
+        return this;
+    }
+
+    public final RestClientBuilder extension(String extension) {
+        this.mExtension = extension;
+        return this;
+    }
 
     public final RestClientBuilder url(String url)
     {
@@ -90,14 +113,6 @@ public class RestClientBuilder {
         this.mISuccess = iSuccess;
         return this;
     }
-
-
-    public final RestClientBuilder raw(String raw)
-    {
-        this.mRequestBody = RequestBody.create(MediaType.parse("application/json,charset=UTF-8"),raw);
-        return this;
-    }
-
     private Map<String,Object> checkParams(){
         if ( null == mParams)
         {
@@ -112,6 +127,15 @@ public class RestClientBuilder {
         this.mLoaderStyle = loaderStyle;
         return this;
     }
+    public final RestClientBuilder file(File file) {
+        this.mFile = file;
+        return this;
+    }
+
+    public final RestClientBuilder file(String path) {
+        this.mFile = new File(path);
+        return this;
+    }
 
     public final RestClientBuilder loader(Context context)
     {
@@ -120,9 +144,16 @@ public class RestClientBuilder {
         return this;
     }
 
+    public final RestClientBuilder raw(String raw) {
+        this.mBody = RequestBody.create(MediaType.parse("application/json;charset=UTF-8"), raw);
+        return this;
+    }
     public final RestClient build(){
 
-        return new RestClient(mUrl,mParams,mIRequest,mISuccess,mIFailure,mIError,mRequestBody,mContext,mLoaderStyle);
+        return new RestClient(mUrl,mParams,mIRequest,
+                              mISuccess,mIFailure,mIError,
+                              mBody,mDownloadDir,mExtension,
+                              mName,mFile,mContext,mLoaderStyle);
     }
 
 
