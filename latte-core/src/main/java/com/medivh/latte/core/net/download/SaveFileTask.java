@@ -6,10 +6,11 @@ import android.os.AsyncTask;
 
 
 
-import com.medivh.core.utils.FileUtil;
+
 import com.medivh.latte.core.app.Latte;
 import com.medivh.latte.core.net.callback.IRequest;
 import com.medivh.latte.core.net.callback.ISuccess;
+import com.medivh.latte.core.utils.FileUtil;
 
 import java.io.File;
 import java.io.InputStream;

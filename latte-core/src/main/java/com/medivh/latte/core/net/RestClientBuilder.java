@@ -3,11 +3,12 @@ package com.medivh.latte.core.net;
 import android.content.Context;
 
 
-import com.medivh.core.ui.LoaderStyle;
+
 import com.medivh.latte.core.net.callback.IError;
 import com.medivh.latte.core.net.callback.IFailure;
 import com.medivh.latte.core.net.callback.IRequest;
 import com.medivh.latte.core.net.callback.ISuccess;
+import com.medivh.latte.core.ui.loader.LoaderStyle;
 
 import java.io.File;
 import java.util.Map;

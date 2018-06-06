@@ -1,7 +1,7 @@
 package com.medivh.latte.core.app;
 
 
-import com.medivh.core.utils.LattePreference;
+import com.medivh.latte.core.utils.LattePreference;
 
 public class AccountManager {
 

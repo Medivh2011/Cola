@@ -4,7 +4,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.RawRes;
 
 
-import com.medivh.core.utils.FileUtil;
+import com.medivh.latte.core.utils.FileUtil;
 
 import java.io.IOException;
 

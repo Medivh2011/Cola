@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.databinding.DataBindingUtil;
 import android.databinding.ViewDataBinding;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,12 +15,18 @@ public  abstract class LatteDelegate< T extends ViewDataBinding > extends Permis
 
     protected T mBinding;
 
+    protected Handler mHandler;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         mBinding = DataBindingUtil.inflate(inflater,getLayoutId(),container,false);
+        mHandler = new Handler(Looper.getMainLooper());
+        onBindView(savedInstanceState,mBinding.getRoot());
         return mBinding.getRoot();
     }
+
+    public abstract void onBindView( @Nullable Bundle savedInstanceState,View rootView);
 
     @Override
     public void onDestroy() {

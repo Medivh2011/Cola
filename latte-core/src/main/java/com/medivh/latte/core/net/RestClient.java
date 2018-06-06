@@ -10,8 +10,8 @@ import com.medivh.latte.core.net.callback.IRequest;
 import com.medivh.latte.core.net.callback.ISuccess;
 import com.medivh.latte.core.net.callback.RequestCallBacks;
 import com.medivh.latte.core.net.download.DownloadHandler;
-import com.medivh.latte.core.ui.LatteLoader;
-import com.medivh.latte.core.ui.LoaderStyle;
+import com.medivh.latte.core.ui.loader.LatteLoader;
+import com.medivh.latte.core.ui.loader.LoaderStyle;
 
 import java.io.File;
 import java.util.Map;

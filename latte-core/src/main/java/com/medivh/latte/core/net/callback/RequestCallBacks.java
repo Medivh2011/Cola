@@ -5,8 +5,8 @@ import android.os.Handler;
 
 import com.medivh.latte.core.app.ConfigKeys;
 import com.medivh.latte.core.app.Latte;
-import com.medivh.latte.core.ui.LatteLoader;
-import com.medivh.latte.core.ui.LoaderStyle;
+import com.medivh.latte.core.ui.loader.LatteLoader;
+import com.medivh.latte.core.ui.loader.LoaderStyle;
 
 import retrofit2.Call;
 import retrofit2.Callback;

@@ -3,10 +3,9 @@ package com.medivh.common;
 import android.app.Application;
 
 import com.joanzapata.iconify.fonts.FontAwesomeModule;
-import com.medivh.latte.ec.font.FontEcModule;
-import com.medivh.core.app.Latte;
-import com.medivh.core.net.interceptors.BaseInterceptor;
-import com.medivh.core.net.interceptors.DebugInterceptor;
+import com.medivh.latte.core.app.Latte;
+import com.medivh.latte.core.font.FontEcModule;
+
 
 public class App extends Application {
 

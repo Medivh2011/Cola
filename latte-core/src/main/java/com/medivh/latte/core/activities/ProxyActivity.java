@@ -5,7 +5,8 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.ContentFrameLayout;
 
-import com.medivh.core.R;
+
+import com.medivh.latte.core.R;
 import com.medivh.latte.core.delegates.LatteDelegate;
 
 

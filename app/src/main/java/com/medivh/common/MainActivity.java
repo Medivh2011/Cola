@@ -1,16 +1,16 @@
 package com.medivh.common;
 
 
+import com.medivh.latte.core.activities.ProxyActivity;
+import com.medivh.latte.core.delegates.LatteDelegate;
+import com.medivh.latte.core.delegates.launcher.LauncherDelegate;
 
-
-import com.medivh.core.activities.ProxyActivity;
-import com.medivh.core.delegates.LatteDelegate;
 
 public class MainActivity extends ProxyActivity {
 
     @Override
     public LatteDelegate setRootDelegate() {
-        return new SimpleDelegate();
+        return new LauncherDelegate();
     }
 
 }
