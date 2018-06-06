@@ -87,7 +87,7 @@ public class ColaRestClient {
 
    private void request(HttpMethod method)
    {
-        final RestService restService = RestCreator.getRestService();
+        final ColaRestService restService = ColaRestCreator.getRestService();
 
         Call<String> call = null;
 

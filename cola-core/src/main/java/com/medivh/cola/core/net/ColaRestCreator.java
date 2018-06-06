@@ -1,7 +1,6 @@
 package com.medivh.cola.core.net;
 
 
-import android.support.annotation.Nullable;
 import android.text.TextUtils;
 
 import com.medivh.cola.core.app.ConfigKeys;
@@ -13,7 +12,7 @@ import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 import retrofit2.converter.scalars.ScalarsConverterFactory;
 
-public class RestCreator {
+public class ColaRestCreator {
 
     private static final class RetrofitHolder {
 
@@ -48,11 +47,11 @@ public class RestCreator {
      * Service接口
      */
     private static final class RestServiceHolder {
-        private static final RestService REST_SERVICE =
-                RetrofitHolder.RETROFIT_CLIENT.create(RestService.class);
+        private static final ColaRestService REST_SERVICE =
+                RetrofitHolder.RETROFIT_CLIENT.create(ColaRestService.class);
     }
 
-    public static RestService getRestService() {
+    public static ColaRestService getRestService() {
 
         return RestServiceHolder.REST_SERVICE;
     }

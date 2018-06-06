@@ -3,7 +3,7 @@ package com.medivh.cola.core.net.download;
 import android.os.AsyncTask;
 
 
-import com.medivh.cola.core.net.RestCreator;
+import com.medivh.cola.core.net.ColaRestCreator;
 import com.medivh.cola.core.net.callback.IError;
 import com.medivh.cola.core.net.callback.IFailure;
 import com.medivh.cola.core.net.callback.IRequest;
@@ -57,7 +57,7 @@ public final class DownloadHandler {
             REQUEST.onRequestStart();
         }
 
-        RestCreator
+        ColaRestCreator
                 .getRestService()
                 .download(URL, PARAMS)
                 .enqueue(new Callback<ResponseBody>() {

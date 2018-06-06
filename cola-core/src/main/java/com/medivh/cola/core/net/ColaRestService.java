@@ -22,7 +22,7 @@ import retrofit2.http.QueryMap;
 import retrofit2.http.Streaming;
 import retrofit2.http.Url;
 
-public interface RestService {
+public interface ColaRestService {
 
     @GET
     Call<String> get(@Url String url , @QueryMap Map<String,Object> params);
