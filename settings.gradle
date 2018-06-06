@@ -1,1 +1,1 @@
-include ':app',':latte-core'
+include ':app', ':cola-core'

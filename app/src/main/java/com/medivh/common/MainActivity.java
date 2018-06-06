@@ -1,9 +1,9 @@
 package com.medivh.common;
 
 
-import com.medivh.latte.core.activities.ProxyActivity;
-import com.medivh.latte.core.delegates.LatteDelegate;
-import com.medivh.latte.core.delegates.launcher.LauncherDelegate;
+import com.medivh.cola.core.activities.ProxyActivity;
+import com.medivh.cola.core.delegates.LatteDelegate;
+import com.medivh.cola.core.delegates.launcher.LauncherDelegate;
 
 
 public class MainActivity extends ProxyActivity {
