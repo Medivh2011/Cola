@@ -8,15 +8,15 @@ import com.medivh.cola.core.delegates.web.event.EventManager;
 import com.medivh.cola.core.utils.ColaLogger;
 
 
-final class LatteWebInterface {
+final class ColaWebInterface {
     private final WebDelegate DELEGATE;
 
-    private LatteWebInterface(WebDelegate delegate) {
+    private ColaWebInterface(WebDelegate delegate) {
         this.DELEGATE = delegate;
     }
 
-    static LatteWebInterface create(WebDelegate delegate) {
-        return new LatteWebInterface(delegate);
+    static ColaWebInterface create(WebDelegate delegate) {
+        return new ColaWebInterface(delegate);
     }
 
     @SuppressWarnings("unused")

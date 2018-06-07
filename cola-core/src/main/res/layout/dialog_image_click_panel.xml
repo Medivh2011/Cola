@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
@@ -9,13 +9,13 @@
     android:orientation="vertical"
     android:paddingBottom="10dp">
 
-    <android.support.v7.widget.AppCompatButton
-        android:id="@+id/photodialog_btn_take"
+    <Button
+        android:id="@+id/dialog_image_clicked_btn_delete"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@drawable/btn_border_takephoto"
         android:gravity="center"
-        android:text="拍照"
+        android:text="删除"
         android:textColor="#323232" />
 
     <View
@@ -26,14 +26,13 @@
         android:gravity="center" />
 
 
-    <android.support.v7.widget.AppCompatButton
-        android:id="@+id/photodialog_btn_native"
+    <Button
+        android:id="@+id/dialog_image_clicked_btn_undetermined"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_gravity="center"
         android:background="@drawable/btn_border_nativephoto"
-        android:gravity="center"
-        android:text="本地"
+        android:text="待定"
         android:textColor="#323232" />
 
     <View
@@ -43,14 +42,13 @@
         android:background="@android:color/transparent"
         android:gravity="center" />
 
-    <android.support.v7.widget.AppCompatButton
-        android:id="@+id/photodialog_btn_cancel"
+    <Button
+        android:id="@+id/dialog_image_clicked_btn_cancel"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_gravity="center"
         android:background="@drawable/btn_border"
-        android:gravity="center"
         android:text="取消"
         android:textColor="#323232" />
 
-</android.support.v7.widget.LinearLayoutCompat>
+</LinearLayout>

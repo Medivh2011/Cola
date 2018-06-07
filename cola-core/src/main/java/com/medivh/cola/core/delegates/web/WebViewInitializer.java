@@ -20,12 +20,7 @@ public class WebViewInitializer {
         //允许截图
         webView.setDrawingCacheEnabled(true);
         //屏蔽长按事件
-        webView.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                return true;
-            }
-        });
+        webView.setOnLongClickListener(v -> true);
         //初始化WebSettings
         final WebSettings settings = webView.getSettings();
         settings.setJavaScriptEnabled(true);

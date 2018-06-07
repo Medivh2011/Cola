@@ -54,7 +54,7 @@ public abstract class WebDelegate<T extends ViewDataBinding > extends ColaDelega
                 mWebView.setWebViewClient(initializer.initWebViewClient());
                 mWebView.setWebChromeClient(initializer.initWebChromeClient());
                 final String name = Cola.getConfiguration(ConfigKeys.JAVASCRIPT_INTERFACE);
-                mWebView.addJavascriptInterface(LatteWebInterface.create(this), name);
+                mWebView.addJavascriptInterface(ColaWebInterface.create(this), name);
                 mIsWebViewAvailable = true;
             } else {
                 throw new NullPointerException("Initializer is null!");

@@ -13,6 +13,7 @@ import com.medivh.cola.core.ui.loader.ColaLoader;
 import com.medivh.cola.core.utils.ColaLogger;
 
 
+
 public class WebViewClientImpl extends WebViewClient {
 
     private final WebDelegate DELEGATE;
