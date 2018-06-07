@@ -30,7 +30,6 @@ import java.util.Timer;
 
 public  abstract class ColaLauncherDelegate<T extends ViewDataBinding> extends PermissionCheckerDelegate {
 
-
     private Timer mTimer;
 
     private int mWaittingTime = 5;
@@ -60,7 +59,6 @@ public  abstract class ColaLauncherDelegate<T extends ViewDataBinding> extends P
             startMainDelegate();
         }
     }
-
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -69,7 +67,6 @@ public  abstract class ColaLauncherDelegate<T extends ViewDataBinding> extends P
         initTimer();
         return mBinding.getRoot();
     }
-
     protected abstract void startLauncherScroll();
 
     protected abstract void startMainDelegate();

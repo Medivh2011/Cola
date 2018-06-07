@@ -1,7 +1,6 @@
 package com.medivh.common;
 
 import com.medivh.cola.core.delegates.launcher.ColaLauncherDelegate;
-import com.medivh.cola.core.delegates.launcher.ColaLauncherScrollDelegate;
 import com.medivh.common.databinding.DelegateLauncherBinding;
 
 public class LauncherDelegate extends ColaLauncherDelegate<DelegateLauncherBinding> {
@@ -9,7 +8,7 @@ public class LauncherDelegate extends ColaLauncherDelegate<DelegateLauncherBindi
     @Override
     protected void startLauncherScroll() {
 
-        start(new ColaLauncherScrollDelegate(),SINGLETASK);
+        start(new ScrollLauncherDelegate(),SINGLETASK);
 
     }
     @Override
