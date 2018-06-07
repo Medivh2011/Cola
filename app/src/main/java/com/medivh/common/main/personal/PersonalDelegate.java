@@ -1,10 +1,11 @@
-package com.medivh.common;
+package com.medivh.common.main.personal;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
 
 import com.medivh.cola.core.delegates.bottom.BottomItemDelegate;
+import com.medivh.common.R;
 import com.medivh.common.databinding.DelegatePersonalBinding;
 
 

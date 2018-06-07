@@ -1,14 +1,15 @@
-package com.medivh.common;
+package com.medivh.common.main.shopcar;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
 
 import com.medivh.cola.core.delegates.bottom.BottomItemDelegate;
-import com.medivh.common.databinding.DelegateIndexBinding;
+import com.medivh.common.R;
+import com.medivh.common.databinding.DelegateShopCarBinding;
 
 
-public class IndexDelegate extends BottomItemDelegate<DelegateIndexBinding>{
+public class ShopCartDelegate extends BottomItemDelegate<DelegateShopCarBinding> {
     @Override
     public void onBindView(@Nullable Bundle savedInstanceState, View rootView) {
 
@@ -16,6 +17,6 @@ public class IndexDelegate extends BottomItemDelegate<DelegateIndexBinding>{
 
     @Override
     protected int getLayoutId() {
-        return R.layout.delegate_index;
+        return R.layout.delegate_shop_car;
     }
 }

@@ -1,10 +1,12 @@
-package com.medivh.common;
+package com.medivh.common.launcher;
 
 import android.support.annotation.NonNull;
 
 import com.bigkoo.convenientbanner.ConvenientBanner;
 import com.medivh.cola.core.delegates.launcher.ColaLauncherScrollDelegate;
+import com.medivh.common.R;
 import com.medivh.common.databinding.DelegateScrollLauncherBinding;
+import com.medivh.common.main.EcBottomDelegate;
 
 
 import java.util.ArrayList;

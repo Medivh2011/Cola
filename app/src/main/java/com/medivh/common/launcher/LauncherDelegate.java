@@ -1,7 +1,9 @@
-package com.medivh.common;
+package com.medivh.common.launcher;
 
 import com.medivh.cola.core.delegates.launcher.ColaLauncherDelegate;
+import com.medivh.common.R;
 import com.medivh.common.databinding.DelegateLauncherBinding;
+import com.medivh.common.main.EcBottomDelegate;
 
 public class LauncherDelegate extends ColaLauncherDelegate<DelegateLauncherBinding> {
 

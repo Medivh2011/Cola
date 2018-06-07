@@ -1,4 +1,4 @@
-package com.medivh.common;
+package com.medivh.common.main;
 
 import android.graphics.Color;
 import android.support.annotation.NonNull;
@@ -9,6 +9,12 @@ import com.medivh.cola.core.delegates.bottom.BottomDelegate;
 import com.medivh.cola.core.delegates.bottom.BottomItemDelegate;
 import com.medivh.cola.core.delegates.bottom.BottomTabBean;
 import com.medivh.cola.core.delegates.bottom.ItemBuilder;
+import com.medivh.common.main.discover.DiscoverDelegate;
+import com.medivh.common.main.home.IndexDelegate;
+import com.medivh.common.main.personal.PersonalDelegate;
+import com.medivh.common.R;
+import com.medivh.common.main.shopcar.ShopCartDelegate;
+import com.medivh.common.main.sort.SortDelegate;
 import com.medivh.common.databinding.DelegateEcbottomBinding;
 
 import java.util.LinkedHashMap;
