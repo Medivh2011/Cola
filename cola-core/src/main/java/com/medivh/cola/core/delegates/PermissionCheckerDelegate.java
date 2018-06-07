@@ -73,22 +73,13 @@ public abstract class PermissionCheckerDelegate extends BaseDelegate implements 
         }
         return needRequestPermissonList;
     }
-
     /**
      * 检测是否说有的权限都已经授权
-     *
      * @param grantResults
      * @return
      * @since 2.5.0
      */
-    private boolean verifyPermissions(int[] grantResults) {
-        for (int result : grantResults) {
-            if (result != PackageManager.PERMISSION_GRANTED) {
-                return false;
-            }
-        }
-        return true;
-    }
+
 
     @Override
     public void onRequestPermissionsResult(int requestCode,
