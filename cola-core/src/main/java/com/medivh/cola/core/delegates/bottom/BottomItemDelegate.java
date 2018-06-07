@@ -4,9 +4,9 @@ import android.databinding.ViewDataBinding;
 import android.widget.Toast;
 
 
-import com.medivh.cola.core.delegates.LatteDelegate;
+import com.medivh.cola.core.delegates.ColaDelegate;
 
-public abstract class BottomItemDelegate<T extends ViewDataBinding> extends LatteDelegate<T>  {
+public abstract class BottomItemDelegate<T extends ViewDataBinding> extends ColaDelegate<T> {
 
     private static final long WAIT_TIME = 2000L;
     private long TOUCH_TIME = 0;
@@ -17,7 +17,7 @@ public abstract class BottomItemDelegate<T extends ViewDataBinding> extends Latt
             _mActivity.finish();
         } else {
             TOUCH_TIME = System.currentTimeMillis();
-            Toast.makeText(_mActivity, "双击返回键退出应用", Toast.LENGTH_SHORT).show();
+            Toast.makeText(_mActivity, "再按一次退出应用", Toast.LENGTH_SHORT).show();
         }
         return true;
     }

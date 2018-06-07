@@ -10,21 +10,21 @@ import com.tencent.mm.opensdk.openapi.IWXAPI;
 import com.tencent.mm.opensdk.openapi.WXAPIFactory;
 
 
-public class LatteWeChat {
+public class ColaWeChat {
     public static final String APP_ID = Cola.getConfiguration(ConfigKeys.WE_CHAT_APP_ID);
     public static final String APP_SECRET = Cola.getConfiguration(ConfigKeys.WE_CHAT_APP_SECRET);
     private final IWXAPI WXAPI;
     private IWeChatSignInCallback mSignInCallback = null;
 
     private static final class Holder {
-        private static final LatteWeChat INSTANCE = new LatteWeChat();
+        private static final ColaWeChat INSTANCE = new ColaWeChat();
     }
 
-    public static LatteWeChat getInstance() {
+    public static ColaWeChat getInstance() {
         return Holder.INSTANCE;
     }
 
-    private LatteWeChat() {
+    private ColaWeChat() {
         final Activity activity = Cola.getConfiguration(ConfigKeys.ACTIVITY);
         WXAPI = WXAPIFactory.createWXAPI(activity, APP_ID, true);
         WXAPI.registerApp(APP_ID);
@@ -34,7 +34,7 @@ public class LatteWeChat {
         return WXAPI;
     }
 
-    public LatteWeChat onSignSuccess(IWeChatSignInCallback callback) {
+    public ColaWeChat onSignSuccess(IWeChatSignInCallback callback) {
         this.mSignInCallback = callback;
         return this;
     }

@@ -4,7 +4,7 @@ import com.orhanobut.logger.Logger;
 
 
 
-public final class LatteLogger {
+public final class ColaLogger {
 
     private static final int VERBOSE = 1;
     private static final int DEBUG = 2;

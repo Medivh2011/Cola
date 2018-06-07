@@ -2,7 +2,7 @@ package com.medivh.cola.core.wechat.templates;
 
 
 import com.medivh.cola.core.wechat.BaseWXEntryActivity;
-import com.medivh.cola.core.wechat.LatteWeChat;
+import com.medivh.cola.core.wechat.ColaWeChat;
 
 public class WXEntryTemplate extends BaseWXEntryActivity {
 
@@ -15,6 +15,6 @@ public class WXEntryTemplate extends BaseWXEntryActivity {
 
     @Override
     protected void onSignInSuccess(String userInfo) {
-        LatteWeChat.getInstance().getSignInCallback().onSignInSuccess(userInfo);
+        ColaWeChat.getInstance().getSignInCallback().onSignInSuccess(userInfo);
     }
 }

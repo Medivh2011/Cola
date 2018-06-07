@@ -7,7 +7,7 @@ import android.support.v4.content.ContextCompat;
 import android.webkit.URLUtil;
 import android.webkit.WebView;
 
-import com.medivh.cola.core.delegates.LatteDelegate;
+import com.medivh.cola.core.delegates.ColaDelegate;
 import com.medivh.cola.core.delegates.web.WebDelegate;
 import com.medivh.cola.core.delegates.web.WebDelegateImpl;
 
@@ -33,7 +33,7 @@ public class Router {
             return true;
         }
 
-        final LatteDelegate topDelegate = delegate.getTopDelegate();
+        final ColaDelegate topDelegate = delegate.getTopDelegate();
 
         final WebDelegateImpl webDelegate = WebDelegateImpl.create(url);
         topDelegate.getSupportDelegate().start(webDelegate);

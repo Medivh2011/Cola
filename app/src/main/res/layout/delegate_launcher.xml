@@ -11,26 +11,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         >
-
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             imageUrl="@{imgUrl}"
             android:src="@mipmap/launcher_00"
             android:scaleType="centerCrop"
-            />
-
-        <android.support.v7.widget.AppCompatTextView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:gravity="center"
-            android:textSize="16sp"
-            android:id="@+id/tv_launcher_timer"
-            android:background="@drawable/border_circle_timer"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="15dp"
-            android:layout_marginTop="15dp"
-            android:text="@android:color/white"
             />
     </RelativeLayout>
 </layout>

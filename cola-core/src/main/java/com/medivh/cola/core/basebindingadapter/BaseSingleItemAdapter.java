@@ -24,6 +24,7 @@ public abstract  class BaseSingleItemAdapter<T> extends BaseBindingAdapter<T> {
     }
     @Override
     public BindingViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+
         return new BindingViewHolder(DataBindingUtil.inflate(mLayoutInflater, layoutRes, parent, false));
     }
 

@@ -15,7 +15,7 @@ import java.util.ArrayList;
 
 
 
-public class LatteLoader {
+public class ColaLoader {
 
     private static final int LOADER_SIZE_SCALE = 8;
     private static final int LOADER_OFFSET_SCALE = 10;

@@ -8,7 +8,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.medivh.cola.core.app.Cola;
 
 
-public final class LattePreference {
+public final class ColaPreference {
 
     /**
      * 提示:

@@ -9,7 +9,7 @@ import android.webkit.WebView;
 
 import com.medivh.cola.core.app.Cola;
 import com.medivh.cola.core.app.ConfigKeys;
-import com.medivh.cola.core.delegates.LatteDelegate;
+import com.medivh.cola.core.delegates.ColaDelegate;
 import com.medivh.cola.core.delegates.web.route.RouteKeys;
 
 import java.lang.ref.ReferenceQueue;
@@ -17,13 +17,13 @@ import java.lang.ref.WeakReference;
 
 
 
-public abstract class WebDelegate<T extends ViewDataBinding > extends LatteDelegate<T> implements IWebViewInitializer {
+public abstract class WebDelegate<T extends ViewDataBinding > extends ColaDelegate<T> implements IWebViewInitializer {
 
     private WebView mWebView = null;
     private final ReferenceQueue<WebView> WEB_VIEW_QUEUE = new ReferenceQueue<>();
     private String mUrl = null;
     private boolean mIsWebViewAvailable = false;
-    private LatteDelegate mTopDelegate = null;
+    private ColaDelegate mTopDelegate = null;
 
     public WebDelegate() {
 
@@ -62,11 +62,11 @@ public abstract class WebDelegate<T extends ViewDataBinding > extends LatteDeleg
         }
     }
 
-    public void setTopDelegate(LatteDelegate delegate) {
+    public void setTopDelegate(ColaDelegate delegate) {
         mTopDelegate = delegate;
     }
 
-    public LatteDelegate getTopDelegate() {
+    public ColaDelegate getTopDelegate() {
         if (mTopDelegate == null) {
             mTopDelegate = this;
         }

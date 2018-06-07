@@ -5,7 +5,7 @@ import android.webkit.JavascriptInterface;
 import com.alibaba.fastjson.JSON;
 import com.medivh.cola.core.delegates.web.event.Event;
 import com.medivh.cola.core.delegates.web.event.EventManager;
-import com.medivh.cola.core.utils.LatteLogger;
+import com.medivh.cola.core.utils.ColaLogger;
 
 
 final class LatteWebInterface {
@@ -24,7 +24,7 @@ final class LatteWebInterface {
     public String event(String params) {
         final String action = JSON.parseObject(params).getString("action");
         final Event event = EventManager.getInstance().createEvent(action);
-        LatteLogger.d("WEB_EVENT",params);
+        ColaLogger.d("WEB_EVENT",params);
         if (event != null) {
             event.setAction(action);
             event.setDelegate(DELEGATE);

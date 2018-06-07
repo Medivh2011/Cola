@@ -10,7 +10,7 @@ import com.medivh.cola.core.utils.FileUtil;
  * 照相机调用类
  */
 
-public class LatteCamera {
+public class ColaCamera {
 
     public static Uri createCropFile() {
         return Uri.parse

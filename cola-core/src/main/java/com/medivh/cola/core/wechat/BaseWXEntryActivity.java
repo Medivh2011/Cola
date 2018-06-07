@@ -4,7 +4,7 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 
 import com.medivh.cola.core.net.ColaRestClient;
-import com.medivh.cola.core.utils.LatteLogger;
+import com.medivh.cola.core.utils.ColaLogger;
 import com.tencent.mm.opensdk.modelbase.BaseReq;
 import com.tencent.mm.opensdk.modelbase.BaseResp;
 import com.tencent.mm.opensdk.modelmsg.SendAuth;
@@ -28,14 +28,14 @@ public abstract class BaseWXEntryActivity extends BaseWXActivity {
         final StringBuilder authUrl = new StringBuilder();
         authUrl
                 .append("https://api.weixin.qq.com/sns/oauth2/access_token?appid=")
-                .append(LatteWeChat.APP_ID)
+                .append(ColaWeChat.APP_ID)
                 .append("&secret=")
-                .append(LatteWeChat.APP_SECRET)
+                .append(ColaWeChat.APP_SECRET)
                 .append("&code=")
                 .append(code)
                 .append("&grant_type=authorization_code");
 
-        LatteLogger.d("authUrl", authUrl.toString());
+        ColaLogger.d("authUrl", authUrl.toString());
         getAuth(authUrl.toString());
     }
 
@@ -58,7 +58,7 @@ public abstract class BaseWXEntryActivity extends BaseWXActivity {
                             .append("&lang=")
                             .append("zh_CN");
 
-                    LatteLogger.d("userInfoUrl", userInfoUrl.toString());
+                    ColaLogger.d("userInfoUrl", userInfoUrl.toString());
                     getUserInfo(userInfoUrl.toString());
 
                 })

@@ -3,7 +3,7 @@ package com.medivh.cola.core.delegates.web.event;
 import android.content.Context;
 import android.webkit.WebView;
 
-import com.medivh.cola.core.delegates.LatteDelegate;
+import com.medivh.cola.core.delegates.ColaDelegate;
 import com.medivh.cola.core.delegates.web.WebDelegate;
 
 
@@ -34,7 +34,7 @@ public abstract class Event implements IEvent {
         this.mAction = mAction;
     }
 
-    public LatteDelegate getDelegate() {
+    public ColaDelegate getDelegate() {
         return mDelegate;
     }
 

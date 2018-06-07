@@ -9,14 +9,14 @@ import com.bigkoo.convenientbanner.ConvenientBanner;
 
 import com.medivh.cola.core.R;
 import com.medivh.cola.core.databinding.DelegateScrollLauncherBinding;
-import com.medivh.cola.core.delegates.LatteDelegate;
+import com.medivh.cola.core.delegates.ColaDelegate;
 import com.medivh.cola.core.ui.launcher.LauncherHolderCreator;
 import com.medivh.cola.core.ui.launcher.ScrollLauncherTag;
-import com.medivh.cola.core.utils.LattePreference;
+import com.medivh.cola.core.utils.ColaPreference;
 
 import java.util.ArrayList;
 
-public class LauncherScrollDelegate extends LatteDelegate<DelegateScrollLauncherBinding> {
+public class ColaLauncherScrollDelegate extends ColaDelegate<DelegateScrollLauncherBinding> {
 
     private final ArrayList<Integer> mIntegers = new ArrayList<>();
 
@@ -33,7 +33,7 @@ public class LauncherScrollDelegate extends LatteDelegate<DelegateScrollLauncher
                                 Log.e("TAG","click_pagespostion: "+ i);
                                 if (i == (mIntegers.size() - 1) )
                                 {
-                                    LattePreference.setAppFlag(ScrollLauncherTag.HAS_FIRST_LAUNCHER_APP.name(),true);
+                                    ColaPreference.setAppFlag(ScrollLauncherTag.HAS_FIRST_LAUNCHER_APP.name(),true);
 
 
                                 } })

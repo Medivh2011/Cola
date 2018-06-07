@@ -10,7 +10,7 @@ import com.medivh.cola.core.net.callback.IRequest;
 import com.medivh.cola.core.net.callback.ISuccess;
 import com.medivh.cola.core.net.callback.RequestCallBacks;
 import com.medivh.cola.core.net.download.DownloadHandler;
-import com.medivh.cola.core.ui.loader.LatteLoader;
+import com.medivh.cola.core.ui.loader.ColaLoader;
 import com.medivh.cola.core.ui.loader.LoaderStyle;
 
 import java.io.File;
@@ -97,7 +97,7 @@ public class ColaRestClient {
         }
         if ( LOADER_STYLE != null )
         {
-            LatteLoader.showLoading(CONTEXT,LOADER_STYLE);
+            ColaLoader.showLoading(CONTEXT,LOADER_STYLE);
         }
 
         switch (method)

@@ -11,7 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public  abstract class LatteDelegate< T extends ViewDataBinding > extends PermissionCheckerDelegate {
+public  abstract class ColaDelegate< T extends ViewDataBinding > extends PermissionCheckerDelegate {
 
     protected T mBinding;
 

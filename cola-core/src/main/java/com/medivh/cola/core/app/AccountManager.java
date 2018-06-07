@@ -1,7 +1,7 @@
 package com.medivh.cola.core.app;
 
 
-import com.medivh.cola.core.utils.LattePreference;
+import com.medivh.cola.core.utils.ColaPreference;
 
 public class AccountManager {
 
@@ -12,11 +12,11 @@ public class AccountManager {
     //保存用户登录状态，登录后调用
     public static void setSignState(boolean state) {
 
-        LattePreference.setAppFlag(SignTag.SIGN_TAG.name(), state);
+        ColaPreference.setAppFlag(SignTag.SIGN_TAG.name(), state);
     }
 
     private static boolean isSignIn() {
-        return LattePreference.getAppFlag(SignTag.SIGN_TAG.name());
+        return ColaPreference.getAppFlag(SignTag.SIGN_TAG.name());
     }
 
     public static void checkAccount(IUserChecker checker) {

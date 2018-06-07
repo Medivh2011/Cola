@@ -9,8 +9,8 @@ import com.medivh.cola.core.app.Cola;
 import com.medivh.cola.core.delegates.IPageLoadListener;
 import com.medivh.cola.core.delegates.web.WebDelegate;
 import com.medivh.cola.core.delegates.web.route.Router;
-import com.medivh.cola.core.ui.loader.LatteLoader;
-import com.medivh.cola.core.utils.LatteLogger;
+import com.medivh.cola.core.ui.loader.ColaLoader;
+import com.medivh.cola.core.utils.ColaLogger;
 
 
 public class WebViewClientImpl extends WebViewClient {
@@ -29,7 +29,7 @@ public class WebViewClientImpl extends WebViewClient {
 
     @Override
     public boolean shouldOverrideUrlLoading(WebView view, String url) {
-        LatteLogger.d("shouldOverrideUrlLoading", url);
+        ColaLogger.d("shouldOverrideUrlLoading", url);
         return Router.getInstance().handleWebUrl(DELEGATE, url);
     }
 
@@ -39,7 +39,7 @@ public class WebViewClientImpl extends WebViewClient {
         if (mIPageLoadListener != null) {
             mIPageLoadListener.onLoadStart();
         }
-        LatteLoader.showLoading(view.getContext());
+        ColaLoader.showLoading(view.getContext());
     }
 
     @Override
@@ -48,6 +48,6 @@ public class WebViewClientImpl extends WebViewClient {
         if (mIPageLoadListener != null) {
             mIPageLoadListener.onLoadEnd();
         }
-        HANDLER.postDelayed(() -> LatteLoader.stopLoading(), 1000);
+        HANDLER.postDelayed(() -> ColaLoader.stopLoading(), 1000);
     }
 }

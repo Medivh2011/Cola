@@ -7,14 +7,14 @@ import android.support.v7.widget.ContentFrameLayout;
 
 
 import com.medivh.cola.core.R;
-import com.medivh.cola.core.delegates.LatteDelegate;
+import com.medivh.cola.core.delegates.BaseDelegate;
 
 
 import me.yokeyword.fragmentation.SupportActivity;
 
 public  abstract class ProxyActivity extends SupportActivity {
 
-    public abstract LatteDelegate setRootDelegate();
+    public abstract BaseDelegate setRootDelegate();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
