@@ -1,10 +1,9 @@
 package com.medivh.cola.core.delegates.launcher;
 
 
-import android.annotation.SuppressLint;
+
 import android.databinding.DataBindingUtil;
 import android.databinding.ViewDataBinding;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -74,9 +73,9 @@ public  abstract class ColaLauncherDelegate<T extends ViewDataBinding> extends P
     private void initTimer(){
         if ( null == mLauncherTimer)
         {
-            mLauncherTimer = new TextView(getContext());
-            mLauncherTimer.setWidth(PixelUtils.dp2px(getContext(),60f));
-            mLauncherTimer.setHeight(PixelUtils.dp2px(getContext(),60f));
+            mLauncherTimer = new TextView(_mActivity);
+            mLauncherTimer.setWidth(PixelUtils.dp2px(_mActivity,60f));
+            mLauncherTimer.setHeight(PixelUtils.dp2px(_mActivity,60f));
             mLauncherTimer.setGravity(Gravity.CENTER);
             mLauncherTimer.setBackgroundResource(R.drawable.border_circle_timer);
             mLauncherTimer.setOnClickListener( v -> jump());
@@ -101,7 +100,7 @@ public  abstract class ColaLauncherDelegate<T extends ViewDataBinding> extends P
         RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT
                 ,RelativeLayout.LayoutParams.WRAP_CONTENT);
         layoutParams.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
-        layoutParams.setMargins(0,PixelUtils.dp2px(getContext(),15f),PixelUtils.dp2px(getContext(),15f),0);
+        layoutParams.setMargins(0,PixelUtils.dp2px(_mActivity,15f),PixelUtils.dp2px(_mActivity,15f),0);
         mLauncherTimer.setLayoutParams(layoutParams);
         if (mBinding.getRoot() instanceof RelativeLayout)
         {
