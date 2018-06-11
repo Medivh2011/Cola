@@ -10,7 +10,7 @@
     		}
     	}
 
-    Step 2. Add the dependency
+## Step 2. Add the dependency
 
     dependencies {
         	  implementation 'com.github.Medivh2011:Cola:1.0.0'
